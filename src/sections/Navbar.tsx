@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '@/components/Logo'
+import Button from '@/components/Button'
+import SignatureLogo from './Signature-Logo.svg'
 
 type Props = {}
 
@@ -18,6 +20,9 @@ function Navbar({}: Props) {
           <div className='brand'>
             <Link href= "https://google.com">
               <Logo />
+              {/* <div className="rui-zhou-icon">
+                <img src={SignatureLogo} alt="React Logo" />
+              </div> */}
             </Link>
           </div>
           <div className='nav-items'>
@@ -32,6 +37,9 @@ function Navbar({}: Props) {
                 ))
               }
             </ul>
+            <div className="nav-items-button">
+              <Button text='Resume' link='http://localhost:3000/resume.pdf'/>
+            </div>
           </div>
         </div>
     </nav>

@@ -1,0 +1,53 @@
+.social-icons {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 5rem;
+    &-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        &-item {
+            font-size: var(--tlarge2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3 ease-in-out;
+
+            &-link {
+                padding: 10px;
+                color: var(--lighest-slate);
+                transition: inherit;
+                outline: 2px dashed transparent;
+                &:hover {
+                    color: var(--theme-color);
+                }
+                &:focus {
+                    outline-color: var(--theme-color);
+                    transform: translateY(-4px);
+                }
+                
+            }
+            &:hover {
+                transform: translateY(-4px);
+            }
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 3px;
+            height: 130px;
+            background-color: var(--theme-color);
+            margin:0px auto;
+
+        }
+        
+    }
+
+
+}
